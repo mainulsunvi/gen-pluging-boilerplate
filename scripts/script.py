@@ -1,7 +1,7 @@
 import os
 import re
 
-def rename_files_recursively(directory, old_text, new_text):
+def rename_files_recursively(directory, new_text, old_text):
     for root, _, files in os.walk(directory):
         for filename in files:
             if old_text in filename:
@@ -12,7 +12,7 @@ def rename_files_recursively(directory, old_text, new_text):
                 print(f"Renamed: {new_filename}")
 
 
-def replace_text_case_insensitive(directory, old_text, new_text):
+def replace_text_case_insensitive(directory, new_text, old_text):
     for root, _, files in os.walk(directory):
         for filename in files:
             file_path = os.path.join(root, filename)
@@ -27,5 +27,5 @@ def replace_text_case_insensitive(directory, old_text, new_text):
 directory = os.path.join(os.path.dirname(__file__), os.pardir)
 
 
-replace_text_case_insensitive(directory, "My_Plugin", "gen_plug")
-rename_files_recursively(directory, 'my-plugin', 'gen-plug')
+# replace_text_case_insensitive(directory, "My_Plugin", "gen_plug")
+rename_files_recursively(directory, 'gen-plug', 'gen_plug')
