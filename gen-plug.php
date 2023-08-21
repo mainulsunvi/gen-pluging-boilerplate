@@ -7,7 +7,7 @@
  * @package           Gen_Plug
  *
  * @wordpress-plugin
- * Plugin Name:       Gen_Plug
+ * Plugin Name:       Gen Plug
  * Plugin URI:        https://msunvi.com
  * Description:       Test Plugin Generator Tools
  * Version:           1.0.0
